@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pengumuman Kelulusan SDIT ADZKIA 3 PADANG</title>
+    <link rel="icon" href="logo.png" type="image/png" />
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        text-align: center;
+        padding: 50px 20px;
+        background: url("background.png") no-repeat center center fixed;
+        background-size: cover;
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(2px);
+        color: #333;
+        height: 100vh;
+      }
+
+      h1,
+      h2 {
+        color: #02006f;
+        text-shadow: 1px 1px 2px #fff;
+      }
+
+      #countdown {
+        font-size: 1.8em;
+        margin-top: 20px;
+        color: #e74c3c;
+        font-weight: bold;
+        background-color: #ffffff;
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        width: auto;
+      }
+
+      #announcement {
+        display: none;
+        margin-top: 40px;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      input[type="text"] {
+        padding: 12px;
+        width: 250px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      button {
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: linear-gradient(135deg, #2980b9, #2471a3);
+      }
+
+      #result {
+        margin-top: 30px;
+      }
+
+      table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 500px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #3498db;
+        color: white;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="logo.png"
+      alt=""
+      style="width: 100px; height: auto; margin-bottom: 20px"
+    />
+    <h1>PENGUMUMAN KELULUSAN SISWA</h1>
+    <h2>SDIT ADZKIA 3 PADANG<br /></h2>
+    <h3>Tahun Ajaran 2024/2025</h3>
+
+    <div id="countdown">
+      Pengumuman akan tersedia pada <strong>2 Juni 2025 pukul 18.00 WIB</strong>
+    </div>
+
+    <div id="announcement">
+      <h2>Cek Kelulusan Berdasarkan NIS</h2>
+      <form id="searchForm">
+        <input
+          type="text"
+          id="nisInput"
+          placeholder="Masukkan NIS Anda"
+          required
+        />
+        <button type="submit">Cek Kelulusan</button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      const students = [
+        {
+          nis: "123456",
+          nama: "Fathan Athallah Kaysan",
+          kelas: "6 Jabal Uhud 1",
+          status: "Lulus",
+        },
+        {
+          nis: "234567",
+          nama: "Siti Aisyah",
+          kelas: "6 Jabal Uhud 1",
+          status: "Lulus",
+        },
+        {
+          nis: "345678",
+          nama: "Fauzan Haris",
+          kelas: "6 Jabal Uhud 1",
+          status: "Lulus",
+        },
+      ];
+
+      const targetDate = new Date("2025-06-01T19:35:00+07:00").getTime();
+
+      const countdownElement = document.getElementById("countdown");
+      const announcementElement = document.getElementById("announcement");
+
+      const countdownInterval = setInterval(function () {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance <= 0) {
+          clearInterval(countdownInterval);
+          countdownElement.style.display = "none";
+          announcementElement.style.display = "block";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML =
+          "Pengumuman tersedia dalam: " +
+          days +
+          "h " +
+          hours +
+          "j " +
+          minutes +
+          "m " +
+          seconds +
+          "d";
+      }, 1000);
+
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const nisInput = document.getElementById("nisInput").value.trim();
+          const resultElement = document.getElementById("result");
+
+          const found = students.find((siswa) => siswa.nis === nisInput);
+
+          if (found) {
+            resultElement.innerHTML = `
+            <table>
+              <thead>
+                <tr>
+                  <th>NIS</th>
+                  <th>Nama</th>
+                  <th>Kelas</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>${found.nis}</td>
+                  <td>${found.nama}</td>
+                  <td>${found.kelas}</td>
+                  <td>${found.status}</td>
+                </tr>
+              </tbody>
+            </table>
+          `;
+          } else {
+            resultElement.innerHTML = `<p style="color:red;">NIS tidak ditemukan. Pastikan Anda memasukkan NIS dengan benar.</p>`;
+          }
+        });
+    </script>
+  </body>
+</html>
