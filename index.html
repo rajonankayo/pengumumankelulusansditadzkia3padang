@@ -9,7 +9,7 @@
       body {
         font-family: "Segoe UI", sans-serif;
         text-align: center;
-        padding: 50px 20px;
+        padding: 10px 20px;
         background: url("background.png") no-repeat center center fixed;
         background-size: cover;
         background-color: rgba(255, 255, 255, 0.85);
@@ -102,7 +102,7 @@
   <body>
     <img
       src="logo.png"
-      alt=""
+      alt="Logo SDIT Adzkia 3 Padang"
       style="width: 100px; height: auto; margin-bottom: 20px"
     />
     <h1>PENGUMUMAN KELULUSAN SISWA</h1>
@@ -112,6 +112,15 @@
     <div id="countdown">
       Pengumuman akan tersedia pada <strong>2 Juni 2025 pukul 18.00 WIB</strong>
     </div>
+
+    <p
+      style="color: #ffffff; font-weight: bold"
+      shadow="10px 10px 20px rgba(0, 0, 0, 0.8)"
+    >
+      Assalamu'alaikum Warahmatullahi Wabarakatuh<br />
+      Silakan tunggu hingga waktu pengumuman tiba. Setelah itu, Antum dapat
+      memasukkan NIS untuk melihat status kelulusan.
+    </p>
 
     <div id="announcement">
       <h2>Cek Kelulusan Berdasarkan NIS</h2>
@@ -215,9 +224,30 @@
             </table>
           `;
           } else {
-            resultElement.innerHTML = `<p style="color:red;">NIS tidak ditemukan. Pastikan Anda memasukkan NIS dengan benar.</p>`;
+            resultElement.innerHTML = `<p style="color:red;">NIS tidak ditemukan. Pastikan antum memasukkan NIS dengan benar.</p>`;
           }
         });
     </script>
+
+    <footer
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #ffffff;
+        background-color: #1803a2;
+        padding: 2px;
+        border-top: 1px solid #ddd;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        z-index: 1000;
+        line-height: 1.2;
+      "
+    >
+      <p>&copy; 2025 SDIT ADZKIA 3 PADANG
+      <br>Website ini dibuat untuk keperluan pengumuman kelulusan siswa.<br>
+      Developed By : Asriadi Kreatif</p>
+    </footer>
   </body>
 </html>
