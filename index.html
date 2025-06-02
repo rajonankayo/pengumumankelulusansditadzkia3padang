@@ -45,6 +45,7 @@
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+        line-height: 1.2;
       }
 
       input[type="text"] {
@@ -70,7 +71,7 @@
       }
 
       #result {
-        margin-top: 30px;
+        margin-top: 10px;
       }
 
       table {
@@ -506,24 +507,10 @@
 
             if (found) {
               resultElement.innerHTML = `
-            <table>
-              <thead>
-                <tr>
-                  <th>NIS</th>
-                  <th>Nama</th>
-                  <th>Kelas</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>${found.nis}</td>
-                  <td>${found.nama}</td>
-                  <td>${found.kelas}</td>
-                  <td>${found.status}</td>
-                </tr>
-              </tbody>
-            </table>
+             <label style="font-size: 40px;"><strong>${found.status}</strong></label><br>
+              <label style="font-size: 20px;"> Alhamdulillah, selamat kepada Ananda <strong> ${found.nama} </strong> dari kelas <strong>${found.kelas}</strong>.             
+              Semoga ilmu yang diperoleh menjadi berkah dan bermanfaat untuk masa depan! </label>
+         
           `;
             } else {
               resultElement.innerHTML = `<p style="color:red;">NIS tidak ditemukan. Pastikan antum memasukkan NIS dengan benar.</p>`;
@@ -533,10 +520,11 @@
 
       <footer
         style="
-          position: absolute;
+          position: relative;
           bottom: 0;
           left: 0;
           width: 100%;
+          margin-top: 50px;
           color: #ffffff;
           background-color: #1803a2;
           padding: 2px;
