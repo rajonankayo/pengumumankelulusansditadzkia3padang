@@ -101,109 +101,411 @@
   </head>
   <body>
     <div>
-    <img
-      src="logo.png"
-      alt="Logo SDIT Adzkia 3 Padang"
-      style="width: 100px; height: auto; margin-bottom: 20px"
-    />
-    <h1>PENGUMUMAN KELULUSAN SISWA</h1>
-    <h2>SDIT ADZKIA 3 PADANG<br /></h2>
-    <h3>Tahun Ajaran 2024/2025</h3>
+      <img
+        src="logo.png"
+        alt="Logo SDIT Adzkia 3 Padang"
+        style="width: 100px; height: auto; margin-bottom: 20px"
+      />
+      <h1>PENGUMUMAN KELULUSAN SISWA</h1>
+      <h2>SDIT ADZKIA 3 PADANG<br /></h2>
+      <h3>Tahun Ajaran 2024/2025</h3>
 
-    <div id="countdown">
-      Pengumuman akan tersedia pada <strong>2 Juni 2025 pukul 18.00 WIB</strong>
-    </div>
+      <div id="countdown">
+        Pengumuman akan tersedia pada
+        <strong>2 Juni 2025 pukul 18.00 WIB</strong>
+      </div>
 
-    <p
-      style="color: #ffffff; font-weight: bold; font-size: larger; -webkit-text-stroke: 1px black;"
-    >
-      Assalamu'alaikum Warahmatullahi Wabarakatuh<br />
-      Silakan tunggu hingga waktu pengumuman tiba. Setelah itu, Antum dapat
-      memasukkan NIS untuk melihat status kelulusan.
-    </p>
+      <p
+        style="
+          color: #ffffff;
+          font-weight: bold;
+          font-size: larger;
+          -webkit-text-stroke: 1px black;
+        "
+      >
+        Assalamu'alaikum Warahmatullahi Wabarakatuh<br />
+        Silakan tunggu hingga waktu pengumuman tiba. Setelah itu, Antum dapat
+        memasukkan NIS untuk melihat status kelulusan.
+      </p>
 
-    <div id="announcement">
-      <h2>Cek Kelulusan Berdasarkan NIS</h2>
-      <form id="searchForm">
-        <input
-          type="text"
-          id="nisInput"
-          placeholder="Masukkan NIS Anda"
-          required
-        />
-        <button type="submit">Cek Kelulusan</button>
-      </form>
-      <div id="result"></div>
-    </div>
+      <div id="announcement">
+        <h2>Cek Kelulusan Berdasarkan NIS</h2>
+        <form id="searchForm">
+          <input
+            type="text"
+            id="nisInput"
+            placeholder="Masukkan NIS Anda"
+            required
+          />
+          <button type="submit">Cek Kelulusan</button>
+        </form>
+        <div id="result"></div>
+      </div>
 
-    <script>
-      const students = [
-        {
-          nis: "123456",
-          nama: "Fathan Athallah Kaysan",
-          kelas: "6 Jabal Uhud 1",
-          status: "Lulus",
-        },
-        {
-          nis: "234567",
-          nama: "Siti Aisyah",
-          kelas: "6 Jabal Uhud 1",
-          status: "Lulus",
-        },
-        {
-          nis: "345678",
-          nama: "Fauzan Haris",
-          kelas: "6 Jabal Uhud 1",
-          status: "Lulus",
-        },
-      ];
+      <script>
+        const students = [
+          {
+            nis: "1903029",
+            nama: "Aisha Syakira Rahman",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903030",
+            nama: "Alhadi Razqa Satria",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903002",
+            nama: "Alkindi Radjani Makarim",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903004",
+            nama: "Aqila Merisa Putri",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903035",
+            nama: "Aufar Ziadi Khulqi",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903036",
+            nama: "Aurantiasya Leona Khansa",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903005",
+            nama: "Azzam Muzakki Al-Fawwaz",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903038",
+            nama: "Faiz Ahmad Zharif",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903042",
+            nama: "Fathih Al Asyraf",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903043",
+            nama: "Hana Aqilah Ghassani Algamar",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903045",
+            nama: "Haziq Farezell Atare",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "2103058",
+            nama: "Imam Adlan Hakim",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "2003059",
+            nama: "Inayah Syakira Adri",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "2303067",
+            nama: "Kinza Riyu Athaillah",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903046",
+            nama: "Mario Ar Razi Afdhal",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1904049",
+            nama: "Muhammad Rafa",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "2203060",
+            nama: "Muzakky Riantardo",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903050",
+            nama: "Nazhifa Syakira Mulia",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903020",
+            nama: "Rafya Kafie El Azzam",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903021",
+            nama: "Raisha Khayla Humaira",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903022",
+            nama: "Rayyan Abiyyu ra",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903053",
+            nama: "Salsabyla Oriza Vilby",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903054",
+            nama: "Shahid Assakha Muhartono",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903026",
+            nama: "Sulthan Aqeel Alaric",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "2103059",
+            nama: "Taqiyya Ratih Mafaza",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "1903027",
+            nama: "Zidanezoa Alfadri",
+            kelas: "6 Jabal Uhud 1",
+            status: "Lulus",
+          },
+          {
+            nis: "2303070",
+            nama: "Aisha Aulia",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903001",
+            nama: "Aliya Regi Azzahra",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903033",
+            nama: "Ariana Fatisha Humaira Fairuz",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903034",
+            nama: "Army Diego Frantostim",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903037",
+            nama: "Azka Asyari",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903006",
+            nama: "Devin Devara",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903007",
+            nama: "Einar Milian Aulia",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903008",
+            nama: "Engrasia Chayra Sitti Athalia",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903039",
+            nama: "Faiz Ariq Ghifari",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903041",
+            nama: "Farzan Ahza Argani",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903009",
+            nama: "Fathan Athallah Kaysan",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903010",
+            nama: "Fatih Alam Ramadhan",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "2103064",
+            nama: "Gavrael Aldent",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903044",
+            nama: "Haura Arifah Yasmin",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903012",
+            nama: "Iqbal Hafizh",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "2103067",
+            nama: "Khaira Muthmainnah",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903014",
+            nama: "Meuthia Torez",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903062",
+            nama: "Mikaila Ihsania Medina",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903047",
+            nama: "Muhammad Haikal Hilfan",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903016",
+            nama: "Nabel Alfaras Syasli",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903017",
+            nama: "Naufal Aqsha Alkhalif",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903018",
+            nama: "Qaireen Abqariah Offik",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903051",
+            nama: "Qusyairi Al Zikri",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903023",
+            nama: "Riyadh Faturrahman",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903024",
+            nama: "Saladin Fateh Jandeska",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+          {
+            nis: "1903025",
+            nama: "Shalsabila Arsyfa Rilan",
+            kelas: "6 Jabal Uhud 2",
+            status: "Lulus",
+          },
+        ];
 
-      const targetDate = new Date("2025-06-02T18:00:00+07:00").getTime();
+        const targetDate = new Date("2025-06-02T18:00:00+07:00").getTime();
 
-      const countdownElement = document.getElementById("countdown");
-      const announcementElement = document.getElementById("announcement");
+        const countdownElement = document.getElementById("countdown");
+        const announcementElement = document.getElementById("announcement");
 
-      const countdownInterval = setInterval(function () {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
+        const countdownInterval = setInterval(function () {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
 
-        if (distance <= 0) {
-          clearInterval(countdownInterval);
-          countdownElement.style.display = "none";
-          announcementElement.style.display = "block";
-          return;
-        }
+          if (distance <= 0) {
+            clearInterval(countdownInterval);
+            countdownElement.style.display = "none";
+            announcementElement.style.display = "block";
+            return;
+          }
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        countdownElement.innerHTML =
-          "Pengumuman tersedia dalam: " +
-          days +
-          "h " +
-          hours +
-          "j " +
-          minutes +
-          "m " +
-          seconds +
-          "d";
-      }, 1000);
+          countdownElement.innerHTML =
+            "Pengumuman tersedia dalam: " +
+            days +
+            "h " +
+            hours +
+            "j " +
+            minutes +
+            "m " +
+            seconds +
+            "d";
+        }, 1000);
 
-      document
-        .getElementById("searchForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          const nisInput = document.getElementById("nisInput").value.trim();
-          const resultElement = document.getElementById("result");
+        document
+          .getElementById("searchForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            const nisInput = document.getElementById("nisInput").value.trim();
+            const resultElement = document.getElementById("result");
 
-          const found = students.find((siswa) => siswa.nis === nisInput);
+            const found = students.find((siswa) => siswa.nis === nisInput);
 
-          if (found) {
-            resultElement.innerHTML = `
+            if (found) {
+              resultElement.innerHTML = `
             <table>
               <thead>
                 <tr>
@@ -223,32 +525,34 @@
               </tbody>
             </table>
           `;
-          } else {
-            resultElement.innerHTML = `<p style="color:red;">NIS tidak ditemukan. Pastikan antum memasukkan NIS dengan benar.</p>`;
-          }
-        });
-    </script>
+            } else {
+              resultElement.innerHTML = `<p style="color:red;">NIS tidak ditemukan. Pastikan antum memasukkan NIS dengan benar.</p>`;
+            }
+          });
+      </script>
 
-    <footer
-      style="
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        color: #ffffff;
-        background-color: #1803a2;
-        padding: 2px;
-        border-top: 1px solid #ddd;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        z-index: 1000;
-        line-height: 1.2;
-      "
-    >
-      <p>&copy; 2025 SDIT ADZKIA 3 PADANG
-      <br>Website ini dibuat untuk keperluan pengumuman kelulusan siswa.<br>
-      Developed By : Asriadi Kreatif</p>
-    </footer>
+      <footer
+        style="
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          color: #ffffff;
+          background-color: #1803a2;
+          padding: 2px;
+          border-top: 1px solid #ddd;
+          box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          z-index: 1000;
+          line-height: 1.2;
+        "
+      >
+        <p>
+          &copy; 2025 SDIT ADZKIA 3 PADANG <br />Website ini dibuat untuk
+          keperluan pengumuman kelulusan siswa.<br />
+          Developed By : Asriadi Kreatif
+        </p>
+      </footer>
     </div>
   </body>
 </html>
